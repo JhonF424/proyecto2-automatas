@@ -1,18 +1,18 @@
 import json
+# from clases.Grafo import *
 
 
-class json:
-    def __init__(self, url: str):
-        self.my_json = self.leer_json(url)
+class ManejoJson:
 
-    @staticmethod
-    def leer_json(url: str) -> dict:
-        try:
-            with open(url) as mi_json:
-                dict_datos = json.load(mi_json)
-                return dict_datos
-        except FileNotFoundError:
-            print("Error archivo no encontrado, nombre del error: {}".format(
-                FileNotFoundError))
-            dict_datos = {}
-            return dict_datos
+    def cargar_estados(self, automata):
+        with open('data/verticesP.json') as contenido:
+            estados = json.load(contenido)
+            for estado in estados:
+                automata.ingresarEstado(estado.get("estado"))
+
+    def cargar_transiciones(self, automata):
+        with open('data/transiciones.json') as contenido:
+            transiciones = json.load(contenido)
+            for transicion in transiciones:
+                automata.ingresarTransicion(transicion.get("origen"), transicion.get(
+                    "destino"), transicion.get("trans"))

@@ -7,11 +7,20 @@ class Transicion:
         self.destino = destino
         self.trans = trans
 
-    def get_origen(self) -> Estado:
+    def getOrigen(self):
         return self.origen
 
-    def get_destino(self) -> Estado:
+    def getDestino(self):
         return self.destino
 
-    def get_trans(self) -> int:
+    def getTrans(self):
         return self.trans
+
+    def setOrigen(self, origen):
+        self.origen = origen
+
+    def setDestino(self, destino):
+        self.destino = destino
+
+    def setTrasn(self, trans):
+        self.trans = trans
