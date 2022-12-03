@@ -1,0 +1,33 @@
+digraph union {
+	rankdir=LR size="8,5"
+	node [shape=doublecircle]
+	XA
+	XB
+	XC
+	YA
+	ZA
+	ZB
+	ZC
+	node [shape=circle]
+	YB
+	YC
+	node [shape=point]
+	init -> XA [label=""]
+	XA -> XA [label=0]
+	XA -> ZB [label=1]
+	XB -> XB [label=0]
+	XB -> XC [label=0]
+	XC -> XC [label=0]
+	XC -> ZC [label=1]
+	ZA -> ZA [label=0]
+	ZA -> YB [label=1]
+	YB -> XB [label=0]
+	YB -> YC [label=0]
+	YC -> XC [label=1]
+	YC -> YA [label=0]
+	YA -> YA [label=0]
+	YA -> XA [label=1]
+	ZB -> ZB [label=0]
+	ZB -> YC [label=1]
+	ZC -> YC [label=1]
+}

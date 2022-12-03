@@ -1,0 +1,17 @@
+digraph complemento {
+	rankdir=LR size="8,5"
+	node [shape=circle]
+	X
+	node [shape=point]
+	init -> X
+	node [shape=doublecircle]
+	Y
+	node [shape=circle]
+	Z
+	X -> X [label=0]
+	X -> Z [label=1]
+	Z -> Y [label=1]
+	Z -> Z [label=0]
+	Y -> Y [label=0]
+	Y -> X [label=1]
+}

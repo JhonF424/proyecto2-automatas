@@ -1,0 +1,17 @@
+digraph automata {
+	rankdir=LR size="8,5"
+	node [shape=doublecircle]
+	X
+	node [shape=point]
+	init -> X
+	node [shape=circle]
+	Y
+	node [shape=doublecircle]
+	Z
+	X -> X [label=0]
+	X -> Z [label=1]
+	Z -> Y [label=1]
+	Z -> Z [label=0]
+	Y -> Y [label=0]
+	Y -> X [label=1]
+}

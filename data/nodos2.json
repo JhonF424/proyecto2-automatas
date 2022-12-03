@@ -1,0 +1,6 @@
+[
+    {"estado": "A", "aceptacion": "False", "iniciacion":  "True"},
+    {"estado": "B", "aceptacion": "False", "iniciacion":  "False"},
+    {"estado": "C", "aceptacion": "True", "iniciacion":  "False"}
+
+]

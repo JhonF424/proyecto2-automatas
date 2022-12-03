@@ -1,16 +1,27 @@
 class Estado:
-    def __init__(self, estado):
-        self.estado = estado
-        self.listaAdyacentes = []
+    def __init__(self, dato, aceptacion, iniciacion):
+        self.dato = dato
+        self.aceptacion = aceptacion
+        self.iniciacion = iniciacion
+        self.listaConexiones = []
 
-    def getEstado(self):
-        return self.estado
+    def getDato(self):
+        return self.dato
 
-    def setEstado(self, estado) -> None:
-        self.estado = estado
+    def setDato(self, dato):
+        self.dato = dato
 
-    def getListaAdyacentes(self):
-        return self.listaAdyacentes
+    def getAceptacion(self):
+        return self.aceptacion
 
-    def setListaAdyacentes(self, listaAdyacentes):
-        self.listaAdyacentes = listaAdyacentes
+    def setAceptacio(self, aceptacion):
+        self.aceptacion = aceptacion
+
+    def getIniciacion(self):
+        return self.iniciacion
+
+    def setAceptacion(self, iniciacion):
+        self.iniciacion = iniciacion
+
+    def getlistaConexiones(self):
+        return self.listaConexiones

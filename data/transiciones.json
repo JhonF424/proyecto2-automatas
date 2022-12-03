@@ -1,0 +1,6 @@
+    [{"inicio": "X", "final": "X", "transicion": "0"},
+    {"inicio": "X", "final": "Z", "transicion": "1"},
+    {"inicio": "Z", "final": "Y", "transicion": "1"},
+    {"inicio": "Z", "final": "Z", "transicion": "0"},
+    {"inicio": "Y", "final": "Y", "transicion": "0"},
+    {"inicio": "Y", "final": "X", "transicion": "1"}]

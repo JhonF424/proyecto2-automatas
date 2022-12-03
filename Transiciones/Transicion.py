@@ -1,26 +1,23 @@
-from Estados.Estado import *
-
-
 class Transicion:
-    def __init__(self, origen: Estado, destino: Estado, trans: int):
-        self.origen = origen
+    def __init__(self, inicio, final, transicion):
+        self.inicio = inicio
+        self.final = final
+        self.transicion = transicion
+
+    def getInicio(self):
+        return self.inicio
+
+    def getFinal(self):
+        return self.final
+
+    def getTransicion(self):
+        return self.transicion
+
+    def setInicio(self, inicio):
+        self.inicio = inicio
+
+    def setFinal(self, destino):
         self.destino = destino
-        self.trans = trans
 
-    def getOrigen(self):
-        return self.origen
-
-    def getDestino(self):
-        return self.destino
-
-    def getTrans(self):
-        return self.trans
-
-    def setOrigen(self, origen):
-        self.origen = origen
-
-    def setDestino(self, destino):
-        self.destino = destino
-
-    def setTrasn(self, trans):
-        self.trans = trans
+    def setTransicion(self, transicion):
+        self.transicion = transicion
