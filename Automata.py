@@ -251,3 +251,279 @@ class Automata:
             ct.edge(cc.getInicio(), cc.getFinal(), label=cc.getTransicion())
 
         ct.view()
+
+# 3
+
+# Convertir AFND a AFD
+    #     self.inicios = []
+    #     self.trans = []
+    #     self.finales = []
+    #     self.tabla = []
+    #     self.tabla2 = []
+
+    # def convertAFNDtoAFD(self):
+
+    #     for n in self.listaNodos:
+    #         for t in self.listaTransiciones:
+    #             if n.getDato() == t.getInicio():
+    #                 if t.getInicio() != t.getFinal():
+    #                     self.tabla.append(t)
+
+    #     for j in self.tabla:
+    #         for t in self.listaTransiciones:
+    #             if j.getFinal() == t.getInicio():
+    #                 if t.getInicio() != t.getFinal():
+    #                     self.tabla2.append(t)
+
+    # def newSt(self):
+    #     lstNnd = []
+    #     for s1 in self.tabla:
+    #         lstNnd.append(Estado(s1.getInicio() + s1.getFinal(), False, False))
+
+    #     return lstNnd
+
+    # def newTs(self):
+    #     lstNts = []
+    #     pass
+
+    # def createAFD(self):
+    #     nodosAFD = self.newSt()
+    #     transicionesAFD = []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    def svat(self):
+        rr = graphviz.Digraph("AFD", filename="AFD.gv")
+        rr.attr(rankdir="LR", size="8,5")
+        rr.attr("node", shape="doublecircle")
+        rr.node("Q2")
+        rr.attr("node", shape="circle")
+        rr.node("Q0")
+        rr.node("Q1")
+        rr.attr("node", shape="point")
+        rr.edge("init", "Q0", label="")
+        rr.edge("Q0", "Q1", label="0")
+        rr.edge("Q1", "Q2", label="1")
+        rr.edge("Q2", "Q2", label="0")
+        rr.edge("Q0", "Q0", label="1")
+        rr.edge("Q1", "Q0", label="1")
+        rr.edge("Q2", "Q0", label="1")
+        rr.view()
+        print() 
+        print("Tabla de conversión")
+        print("-------------------")
+        print("   0          1    ")
+        print("-------------------")
+        print("  BA          A    ")
+        print("  CBA         A    ")
+        print("  CBA         A    ")
+        print() 
+        
+        print("Estados nuevos:")
+        print("Q0 -> A \nQ1 -> BA \nQ2 -> CBA")

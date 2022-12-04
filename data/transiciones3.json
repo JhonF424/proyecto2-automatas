@@ -1,0 +1,17 @@
+    [
+        {
+            "inicio": "A",
+            "final": "B",
+            "transicion": "0"
+        },
+        {
+            "inicio": "B",
+            "final": "C",
+            "transicion": "0"
+        },
+        {
+            "inicio": "A",
+            "final": "A",
+            "transicion": "1,0"
+        }
+    ]
